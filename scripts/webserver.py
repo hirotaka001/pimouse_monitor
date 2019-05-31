@@ -3,7 +3,7 @@ import rospy, os
 import SimpleHTTPServer
 
 def kill():
-    os.system("kill -KILL " + str(os.getpgid()))
+    os.system("kill -KILL " + str(os.getpid()))
 
 os.chdir(os.path.dirname(__file__) + "/../contents")
 rospy.init_node("webserver")
