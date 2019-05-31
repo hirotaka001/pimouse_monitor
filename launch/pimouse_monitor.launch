@@ -1,0 +1,7 @@
+<launch>
+  <node plg="pimouse_monitor" name="webserver" type="webserver.py" args="8000" />
+  <include file="$(find rosbrige_server)/launch/rosbrige_websocket.launch">
+    <arg name="port" value="9000"/>
+  </include>
+  <include file="$(find pimouse_ros)/launch/pimouse.launch" />
+</launch>
