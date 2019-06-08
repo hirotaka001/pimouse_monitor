@@ -11,7 +11,7 @@ var ls = new ROSLIB.Topic({
 });
 
 ls.subscribe(function(message) {
-        Object.keys(message).forEach(function(e)){
+        Object.keys(message).forEach(function(e){
                 $("#"+e).html(message[e])
         });
 });
